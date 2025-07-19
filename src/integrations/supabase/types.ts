@@ -14,7 +14,198 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          status: string
+          subject: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          status?: string
+          subject?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          status?: string
+          subject?: string | null
+        }
+        Relationships: []
+      }
+      experience_entries: {
+        Row: {
+          achievements: string[] | null
+          company: string
+          created_at: string
+          description: string
+          display_order: number
+          end_date: string | null
+          id: string
+          location: string | null
+          position: string
+          start_date: string
+          technologies: string[] | null
+          updated_at: string
+        }
+        Insert: {
+          achievements?: string[] | null
+          company: string
+          created_at?: string
+          description: string
+          display_order?: number
+          end_date?: string | null
+          id?: string
+          location?: string | null
+          position: string
+          start_date: string
+          technologies?: string[] | null
+          updated_at?: string
+        }
+        Update: {
+          achievements?: string[] | null
+          company?: string
+          created_at?: string
+          description?: string
+          display_order?: number
+          end_date?: string | null
+          id?: string
+          location?: string | null
+          position?: string
+          start_date?: string
+          technologies?: string[] | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      news_items: {
+        Row: {
+          color: string
+          created_at: string
+          date: string
+          description: string
+          icon: string
+          id: string
+          publication_url: string | null
+          status: string
+          title: string
+          type: string
+          updated_at: string
+        }
+        Insert: {
+          color?: string
+          created_at?: string
+          date: string
+          description: string
+          icon?: string
+          id?: string
+          publication_url?: string | null
+          status: string
+          title: string
+          type: string
+          updated_at?: string
+        }
+        Update: {
+          color?: string
+          created_at?: string
+          date?: string
+          description?: string
+          icon?: string
+          id?: string
+          publication_url?: string | null
+          status?: string
+          title?: string
+          type?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      research_areas: {
+        Row: {
+          color: string
+          created_at: string
+          description: string
+          display_order: number
+          icon: string
+          id: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          color?: string
+          created_at?: string
+          description: string
+          display_order?: number
+          icon?: string
+          id?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          color?: string
+          created_at?: string
+          description?: string
+          display_order?: number
+          icon?: string
+          id?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      research_projects: {
+        Row: {
+          created_at: string
+          description: string
+          id: string
+          institution: string
+          status: string
+          supervisor: string | null
+          technologies: string[] | null
+          title: string
+          type: string
+          updated_at: string
+          year: number
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          id?: string
+          institution: string
+          status: string
+          supervisor?: string | null
+          technologies?: string[] | null
+          title: string
+          type: string
+          updated_at?: string
+          year: number
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: string
+          institution?: string
+          status?: string
+          supervisor?: string | null
+          technologies?: string[] | null
+          title?: string
+          type?: string
+          updated_at?: string
+          year?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
