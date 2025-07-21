@@ -1,74 +1,90 @@
-import { Brain, Network, Car, Zap, ExternalLink, Calendar, Users } from "lucide-react";
+import { Brain, Network, Code, FileText, ExternalLink, Calendar, Users, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 
 const Research = () => {
-  const researchAreas = [
+  const publications = [
     {
-      icon: Brain,
-      title: "Artificial Intelligence & Machine Learning",
-      description: "Developing intelligent algorithms and exploring the frontiers of AI technology.",
-      color: "text-primary"
+      title: "The Last Mile: A Novel, HotSpot-Based Distributed Path-Sharing Network for Food Deliveries",
+      authors: "Ashman Mehra, Divyanshu Singh, Vaskar Raychoudhury, Archana Mathur, Snehanshu Saha",
+      venue: "IEEE Transactions on Intelligent Transportation Systems",
+      year: "2024",
+      status: "Published",
+      link: "https://ieeexplore.ieee.org/abstract/document/10705350",
+      impact: "Q1 Journal"
     },
     {
-      icon: Network,
-      title: "Reinforcement Learning",
-      description: "Advanced learning systems that adapt and improve through interaction with environments.",
-      color: "text-secondary"
-    },
-    {
-      icon: Car,
-      title: "Traffic Optimization",
-      description: "Smart transportation systems and optimization models for urban mobility.",
-      color: "text-accent"
-    },
-    {
-      icon: Zap,
-      title: "Diffusion Models",
-      description: "Uncertainty-based adaptive planning with cutting-edge diffusion model techniques.",
-      color: "text-primary"
+      title: "Altruistic Ride Sharing: A Community-Driven Approach to Short-Distance Mobility Using Multi-Agent Reinforcement Learning",
+      authors: "Divyanshu Singh, Ashman Mehra, Snehanshu Saha, Santonu Sarkar",
+      venue: "ArXiv (Soon)",
+      year: "2025",
+      status: "Preprint",
+      link: "",
+      impact: "Preprint"
     }
   ];
 
-  const projects = [
+  const ongoingProjects = [
     {
-      title: "Dynamic Obstacle Avoidance with Diffusion Models",
-      institution: "CLAN Labs, Purdue University",
-      supervisor: "Dr. Vaneet Aggarwal",
-      description: "Developing uncertainty-based adaptive planning techniques for dynamic obstacle avoidance using state-of-the-art diffusion models.",
-      status: "Ongoing",
-      year: "2025",
-      technologies: ["Python", "PyTorch", "Diffusion Models", "Reinforcement Learning"],
-      type: "Research Internship"
-    },
-    {
-      title: "The Last Mile: HotSpot-Based Distributed Path-Sharing Network",
-      institution: "IEEE Transactions on Intelligent Transportation Systems",
-      description: "A novel approach to food delivery optimization using distributed path-sharing networks with hotspot-based algorithms.",
-      status: "Published",
-      year: "2024",
-      technologies: ["Network Optimization", "Graph Theory", "Distributed Systems"],
-      type: "Publication",
-      impact: "Q1 Journal, Impact Factor: 9.95"
-    },
-    {
-      title: "Inverse Text Normalization for Indian Languages",
-      institution: "Digital India Bhashini",
-      description: "Contributing to the National Language Translation Mission through advanced text normalization using WFSTs and Transformer models.",
-      status: "Completed",
-      year: "2024",
-      technologies: ["NLP", "Transformers", "WFST", "Python"],
-      type: "Research Internship"
-    },
-    {
-      title: "AI Research at APPCAIR",
+      title: "Driver Behaviour Modeling",
       institution: "BITS Pilani",
-      supervisor: "APPCAIR Research Center",
-      description: "Undergraduate research focusing on artificial intelligence applications and machine learning model development.",
-      status: "Ongoing",
-      year: "2023-Present",
-      technologies: ["Machine Learning", "Deep Learning", "Python", "TensorFlow"],
-      type: "Undergraduate Research"
+      period: "December 2024 -- Present",
+      description: "Developing a transformer-based encoder-decoder model integrating kinematic data, vectorized maps, and vision-language outputs for real-time anomaly detection in traffic behavior. Designing a driver unruliness quantification framework, capturing risky maneuvers, violations, and aggressive driving patterns.",
+      technologies: ["Generative AI", "Computer Vision", "NLP"],
+      type: "Research Project"
+    },
+    {
+      title: "Dynamic Obstacle Avoidance Using Flow Matching",
+      institution: "Purdue University",
+      period: "May 2025 -- Present",
+      description: "Designing a Conditional Flow Matching (CFM) model for trajectory generation in dynamic and obstacle-rich environments. Investigating adaptive replanning strategies using Schrödinger Bridge-based drift detection to handle distributional shifts during execution.",
+      technologies: ["Generative Modeling", "Motion Planning"],
+      type: "Research Project"
+    },
+    {
+      title: "Altruistic Ride Sharing",
+      institution: "BITS Pilani",
+      period: "August 2024 -- Present",
+      description: "Developed an altruistic ride-sharing framework where drivers can pick up and drop off riders along their route while minimizing detours. Utilizing an Attention-based Multi-Agent Actor-Critic model with novel policy modifications to enhance cooperative decision-making. Exploring conditional diffusion models for offline trajectory planning.",
+      technologies: ["Deep Reinforcement Learning", "Generative AI", "Optimization"],
+      type: "Research Project"
+    },
+    {
+      title: "Graph Diffusion for RNA 3D Folding",
+      institution: "BITS Pilani",
+      period: "March 2025 -- Present",
+      description: "Developing a graph diffusion model to predict 3D structures of RNA molecules by leveraging graph neural networks and probabilistic sampling techniques. Exploring the integration of structural constraints and energy-based priors to enhance the accuracy of RNA folding predictions.",
+      technologies: ["Graph Neural Networks", "Diffusion Models", "Computational Biology"],
+      type: "Research Project"
+    }
+  ];
+
+  const completedProjects = [
+    {
+      title: "DeliverAI",
+      institution: "BITS Pilani",
+      period: "December 2023 -- June 2024",
+      description: "Proposed DeliverAI, a reinforcement learning-based path-sharing algorithm to optimize food delivery routes by reducing costs and improving efficiency. Simulated on real-world Chicago delivery data, demonstrating a 15% reduction in fleet size, 16% reduction in distance traveled, and 50% increase in fleet utilization.",
+      technologies: ["Reinforcement Learning", "Optimization"],
+      type: "Research Project",
+      publication: "Published in IEEE Transactions on Intelligent Transportation Systems"
+    },
+    {
+      title: "LLMExam: AI-Driven Question Paper Generation",
+      institution: "BITS Pilani",
+      period: "April 2025",
+      description: "Built a multimodal pipeline using a local LLM (Qwen 2.5) for automated retrieval of textual questions, diagrams, and graphs from PDFs. Implemented LLM-driven topic tagging with dynamic matching against a vector database for accurate question categorization.",
+      technologies: ["NLP", "Retrieval-Augmented Generation", "Generative AI", "Multimodal AI"],
+      type: "Research Project"
+    },
+    {
+      title: "Zero-Shot Classification with RoBERTa",
+      institution: "BITS Pilani",
+      period: "November 2024",
+      description: "Utilized a pre-trained RoBERTa model for zero-shot classification on the AG News dataset. Optimized label prompts iteratively with generative LLMs, boosting accuracy from 48.5% to 82.13%. Assessed performance using precision, recall, F1-score, and confusion matrices.",
+      technologies: ["NLP", "Deep Learning", "Generative AI"],
+      type: "Research Project",
+      link: "https://github.com/Divyanshudiv/Roberta_Zero_Shot"
     }
   ];
 
@@ -100,30 +116,71 @@ const Research = () => {
         </div>
       </section>
 
-      {/* Research Areas */}
+      {/* Publications Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Research <span className="gradient-text">Areas</span>
+              Publications & <span className="gradient-text">Preprints</span>
             </h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {researchAreas.map((area, index) => (
+
+            <div className="space-y-6">
+              {publications.map((pub, index) => (
                 <div 
                   key={index}
-                  className="floating-card p-6 rounded-xl text-center group animate-slide-up hover:scale-105 transition-all duration-500"
-                  style={{ animationDelay: `${0.1 * index}s` }}
+                  className="floating-card p-6 lg:p-8 rounded-xl animate-slide-up group hover:scale-[1.02] transition-all duration-500"
+                  style={{ animationDelay: `${0.2 * index}s` }}
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-primary mb-6 ${area.color}`}>
-                    <area.icon className="w-8 h-8 text-primary-foreground" />
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="flex-1 space-y-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {pub.title}
+                        </h3>
+                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(pub.status)} w-fit`}>
+                          {pub.status}
+                        </span>
+                      </div>
+
+                      <div className="text-sm text-muted-foreground">
+                        <span className="font-semibold">Authors: </span>
+                        {pub.authors}
+                      </div>
+
+                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                          <FileText className="w-4 h-4" />
+                          <span>{pub.venue}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{pub.year}</span>
+                        </div>
+                      </div>
+
+                      {pub.impact && (
+                        <div className="glass p-3 rounded-lg border-accent/20">
+                          <span className="text-accent font-semibold text-sm">{pub.impact}</span>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex flex-col items-center lg:items-end gap-4">
+                      {pub.link && pub.status === "Published" && (
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          className="glass border-accent/30 hover:border-accent text-accent hover:text-accent-foreground hover:bg-accent transition-all duration-300"
+                          asChild
+                        >
+                          <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                            View Paper
+                            <ExternalLink className="w-4 h-4 ml-2" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
-                    {area.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {area.description}
-                  </p>
                 </div>
               ))}
             </div>
@@ -131,61 +188,47 @@ const Research = () => {
         </div>
       </section>
 
-      {/* Projects Timeline */}
+      {/* Ongoing Projects */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Featured <span className="gradient-text">Projects</span>
+              Ongoing <span className="gradient-text">Projects</span>
             </h2>
 
             <div className="space-y-8">
-              {projects.map((project, index) => (
+              {ongoingProjects.map((project, index) => (
                 <div 
                   key={index}
                   className="floating-card p-6 lg:p-8 rounded-xl animate-slide-up group hover:scale-[1.02] transition-all duration-500"
                   style={{ animationDelay: `${0.2 * index}s` }}
                 >
                   <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Project Info */}
                     <div className="flex-1 space-y-4">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                           {project.title}
                         </h3>
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)} w-fit`}>
-                          {project.status}
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border bg-primary/10 text-primary border-primary/20 w-fit">
+                          Ongoing
                         </span>
                       </div>
 
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                         <div className="flex items-center gap-2">
                           <Calendar className="w-4 h-4" />
-                          <span>{project.year}</span>
+                          <span>{project.period}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Users className="w-4 h-4" />
                           <span>{project.institution}</span>
                         </div>
-                        {project.supervisor && (
-                          <div className="text-primary font-medium">
-                            Supervisor: {project.supervisor}
-                          </div>
-                        )}
                       </div>
 
                       <p className="text-muted-foreground leading-relaxed">
                         {project.description}
                       </p>
 
-                      {project.impact && (
-                        <div className="glass p-3 rounded-lg border-accent/20">
-                          <span className="text-accent font-semibold text-sm">Impact: </span>
-                          <span className="text-muted-foreground text-sm">{project.impact}</span>
-                        </div>
-                      )}
-
-                      {/* Technologies */}
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, techIndex) => (
                           <span 
@@ -198,21 +241,96 @@ const Research = () => {
                       </div>
                     </div>
 
-                    {/* Project Type Badge */}
+                    <div className="flex flex-col items-center lg:items-end gap-4">
+                      <div className="glass p-4 rounded-xl text-center">
+                        <div className="text-xs text-muted-foreground mb-1">Type</div>
+                        <div className="font-semibold text-primary">{project.type}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Completed Projects */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
+              Completed <span className="gradient-text">Projects</span>
+            </h2>
+
+            <div className="space-y-8">
+              {completedProjects.map((project, index) => (
+                <div 
+                  key={index}
+                  className="floating-card p-6 lg:p-8 rounded-xl animate-slide-up group hover:scale-[1.02] transition-all duration-500"
+                  style={{ animationDelay: `${0.2 * index}s` }}
+                >
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="flex-1 space-y-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {project.title}
+                        </h3>
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border bg-secondary/10 text-secondary border-secondary/20 w-fit">
+                          Completed
+                        </span>
+                      </div>
+
+                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{project.period}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4" />
+                          <span>{project.institution}</span>
+                        </div>
+                      </div>
+
+                      <p className="text-muted-foreground leading-relaxed">
+                        {project.description}
+                      </p>
+
+                      {project.publication && (
+                        <div className="glass p-3 rounded-lg border-accent/20">
+                          <span className="text-accent font-semibold text-sm">{project.publication}</span>
+                        </div>
+                      )}
+
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="px-3 py-1 bg-muted/30 text-foreground text-xs rounded-full border border-muted/50"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
                     <div className="flex flex-col items-center lg:items-end gap-4">
                       <div className="glass p-4 rounded-xl text-center">
                         <div className="text-xs text-muted-foreground mb-1">Type</div>
                         <div className="font-semibold text-primary">{project.type}</div>
                       </div>
 
-                      {project.status === "Published" && (
+                      {project.link && (
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="glass border-accent/30 hover:border-accent text-accent hover:text-accent-foreground hover:bg-accent transition-all duration-300"
+                          className="glass border-secondary/30 hover:border-secondary text-secondary hover:text-secondary-foreground hover:bg-secondary transition-all duration-300"
+                          asChild
                         >
-                          View Paper
-                          <ExternalLink className="w-4 h-4 ml-2" />
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 mr-2" />
+                            View Code
+                          </a>
                         </Button>
                       )}
                     </div>
@@ -229,19 +347,23 @@ const Research = () => {
                   <div className="space-y-2">
                     <h4 className="font-semibold text-primary">Core Areas</h4>
                     <ul className="text-muted-foreground space-y-1">
-                      <li>• Machine Learning & Deep Learning</li>
-                      <li>• Reinforcement Learning</li>
-                      <li>• Computer Vision</li>
+                      <li>• Generative AI</li>
+                      <li>• Deep Learning</li>
                       <li>• Natural Language Processing</li>
+                      <li>• Computer Vision</li>
+                      <li>• Reinforcement Learning</li>
+                      <li>• Optimization</li>
                     </ul>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-secondary">Applied Research</h4>
+                    <h4 className="font-semibold text-secondary">Applied Domains</h4>
                     <ul className="text-muted-foreground space-y-1">
-                      <li>• Distributed Systems</li>
-                      <li>• Database Systems</li>
-                      <li>• Cloud Computing</li>
-                      <li>• Transportation Systems</li>
+                      <li>• Motion Planning</li>
+                      <li>• Traffic Optimization</li>
+                      <li>• Computational Biology</li>
+                      <li>• Multimodal AI</li>
+                      <li>• Graph Neural Networks</li>
+                      <li>• Diffusion Models</li>
                     </ul>
                   </div>
                 </div>

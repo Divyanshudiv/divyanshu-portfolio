@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Award, Code, BookOpen, Trophy, Users, Rocket } from "lucide-react";
+import { MapPin, Calendar, Award, Code, BookOpen, Trophy, Users, Rocket, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 
@@ -8,90 +8,143 @@ const Experience = () => {
       title: "Research Intern",
       company: "CLAN Labs, Purdue University",
       location: "West Lafayette, IN, USA",
-      period: "Summer 2025",
-      status: "Upcoming",
-      description: "Developing dynamic obstacle avoidance techniques using uncertainty-based adaptive planning with diffusion models under the supervision of Dr. Vaneet Aggarwal.",
-      skills: ["Diffusion Models", "Reinforcement Learning", "Python", "PyTorch", "Adaptive Planning"],
+      period: "May 2025 -- Present",
+      status: "Current",
+      description: "Currently developing dynamic obstacle avoidance techniques using energy-based adaptive planning with flow matching models. Exploring multi-modal applications of diffusion models in medical domains.",
+      supervisor: "Dr. Vaneet Aggarwal",
+      skills: ["Flow Matching", "Diffusion Models", "Motion Planning", "Python", "PyTorch"],
       icon: Rocket,
       color: "text-primary"
     },
     {
-      title: "Research Intern",
-      company: "Digital India Bhashini",
-      location: "Remote, India",
-      period: "Summer 2024",
-      status: "Completed",
-      description: "Contributed to the National Language Translation Mission through work on Inverse Text Normalization using WFSTs and Transformer-based models.",
-      skills: ["NLP", "Transformers", "WFST", "Python", "Text Processing"],
-      icon: Code,
-      color: "text-secondary"
-    },
-    {
       title: "Undergraduate Researcher",
-      company: "APPCAIR, BITS Pilani",
+      company: "APP Center for AI Research (APPCAIR)",
       location: "Goa, India",
-      period: "2023 - Present",
-      status: "Ongoing",
-      description: "Working on AI and machine learning research projects, particularly focusing on reinforcement learning and traffic optimization models.",
-      skills: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Research"],
+      period: "December 2023 -- Present",
+      status: "Current",
+      description: "Developed DeliverAI, a reinforcement learning-based model for optimizing food delivery routes. Investigating a novel dynamic ride-sharing system using a multi-agent actor-critic approach. Formulating a driver behavior modeling framework to quantify unruliness in traffic scenarios.",
+      supervisor: "Dr. Snehanshu Saha, Dr. Santonu Sarkar",
+      skills: ["Reinforcement Learning", "Multi-Agent Systems", "Deep Learning", "Optimization"],
       icon: BookOpen,
       color: "text-accent"
+    },
+    {
+      title: "Research Intern",
+      company: "Digital India Bhashini Division",
+      location: "Remote, India",
+      period: "May 2024 -- July 2024",
+      status: "Completed",
+      description: "Collaborated with the post-processing team, focusing on Inverse Text Normalization (ITN). Designed a WFST-based model for ITN across diverse Indic languages. Implemented a T5-based model to enhance ITN by introducing punctuation handling.",
+      supervisor: "National Language Mission",
+      skills: ["NLP", "Transformers", "WFST", "T5", "Indic Languages"],
+      icon: Code,
+      color: "text-secondary"
+    }
+  ];
+
+  const volunteerExperiences = [
+    {
+      title: "Teaching Assistant",
+      company: "CS-F425 Deep Learning, BITS Pilani",
+      location: "Goa, India",
+      period: "Jan -- May 2025",
+      status: "Current",
+      description: "Designed and conducted tutorials on deep learning concepts for undergraduate students.",
+      skills: ["Teaching", "Deep Learning", "Curriculum Design"],
+      icon: Users,
+      color: "text-primary"
+    },
+    {
+      title: "Undergraduate Volunteer",
+      company: "IndoML 2024",
+      location: "Goa, India",
+      period: "December 2024",
+      status: "Completed",
+      description: "Represented APPCAIR as one of the few undergraduate volunteers, showcased research at the sponsor stall, and facilitated Q&A sessions during the conference.",
+      skills: ["Conference Management", "Research Presentation", "Networking"],
+      icon: Award,
+      color: "text-secondary"
     }
   ];
 
   const technicalSkills = [
     {
       category: "Programming Languages",
-      skills: ["Python", "C++", "Java", "JavaScript", "R", "MATLAB"],
+      skills: ["Python", "C++", "C", "Java", "SQL", "LaTeX"],
       icon: Code
     },
     {
       category: "Machine Learning & AI",
-      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Transformers", "Diffusion Models"],
+      skills: ["PyTorch", "TensorFlow", "JAX", "Hugging Face", "Gymnasium", "PettingZoo"],
       icon: Trophy
     },
     {
       category: "Tools & Technologies",
-      skills: ["Git", "Docker", "AWS", "Linux", "Jupyter", "VS Code"],
+      skills: ["Anaconda", "GitHub", "Docker", "Linux", "VS Code", "Jupyter"],
       icon: Award
     },
     {
       category: "Research Areas",
-      skills: ["Reinforcement Learning", "Computer Vision", "NLP", "Distributed Systems"],
+      skills: ["Generative AI", "Deep Learning", "NLP", "Computer Vision", "Reinforcement Learning", "Optimization"],
       icon: BookOpen
     }
   ];
 
   const courses = [
     {
-      title: "Machine Learning Specialization",
-      provider: "Stanford University (Coursera)",
+      title: "Generative AI",
+      provider: "BITS Pilani",
       status: "Completed",
-      description: "Comprehensive course covering supervised and unsupervised learning, deep learning, and practical applications."
+      description: "Advanced course on generative models, diffusion models, and their applications in various domains."
     },
     {
-      title: "Deep Learning Specialization",
-      provider: "DeepLearning.AI (Coursera)",
+      title: "Natural Language Processing",
+      provider: "BITS Pilani",
       status: "Completed",
-      description: "In-depth study of neural networks, CNNs, RNNs, and advanced deep learning techniques."
+      description: "Comprehensive study of NLP techniques, transformers, and language model applications."
     },
     {
       title: "Reinforcement Learning",
-      provider: "University of Alberta (Coursera)",
+      provider: "BITS Pilani",
       status: "Completed",
       description: "Theoretical foundations and practical implementations of reinforcement learning algorithms."
     },
     {
-      title: "Natural Language Processing",
-      provider: "Stanford CS224N",
-      status: "Audited",
-      description: "Advanced NLP techniques including attention mechanisms, transformers, and language models."
+      title: "Foundations of Data Science",
+      provider: "BITS Pilani",
+      status: "Completed",
+      description: "Statistical foundations, machine learning algorithms, and data analysis techniques."
+    },
+    {
+      title: "DeepMind x UCL: Deep Learning Lectures",
+      provider: "Online",
+      status: "Completed",
+      description: "Advanced deep learning concepts from DeepMind researchers and UCL faculty."
+    },
+    {
+      title: "DeepMind x UCL: Reinforcement Learning Lectures",
+      provider: "Online",
+      status: "Completed",
+      description: "Cutting-edge reinforcement learning techniques and applications."
+    },
+    {
+      title: "CS229 Stanford ML",
+      provider: "Stanford University (Online)",
+      status: "Completed",
+      description: "Comprehensive machine learning course covering supervised and unsupervised learning."
+    },
+    {
+      title: "CS50's Introduction to AI with Python",
+      provider: "Harvard University (Online)",
+      status: "Completed",
+      description: "Introduction to artificial intelligence concepts and Python implementation.",
+      certificate: "https://certificates.cs50.io/a0d1bd0a-dbcb-44f0-991e-9732d52f6a00.pdf"
     }
   ];
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
-      case "upcoming": return "bg-primary/10 text-primary border-primary/20";
+      case "current": return "bg-primary/10 text-primary border-primary/20";
       case "ongoing": return "bg-secondary/10 text-secondary border-secondary/20";
       case "completed": return "bg-accent/10 text-accent border-accent/20";
       default: return "bg-muted/10 text-muted-foreground border-muted/20";
@@ -127,6 +180,80 @@ const Experience = () => {
 
             <div className="space-y-8">
               {experiences.map((exp, index) => (
+                <div 
+                  key={index}
+                  className="floating-card p-6 lg:p-8 rounded-xl animate-slide-up group hover:scale-[1.02] transition-all duration-500"
+                  style={{ animationDelay: `${0.2 * index}s` }}
+                >
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    {/* Icon and Status */}
+                    <div className="flex lg:flex-col items-center lg:items-start gap-4 lg:gap-2 flex-shrink-0">
+                      <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-primary ${exp.color}`}>
+                        <exp.icon className="w-6 h-6 text-primary-foreground" />
+                      </div>
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(exp.status)} w-fit`}>
+                        {exp.status}
+                      </span>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 space-y-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                          {exp.title}
+                        </h3>
+                        <h4 className="text-lg text-primary font-semibold">{exp.company}</h4>
+                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-2">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>{exp.period}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            <span>{exp.location}</span>
+                          </div>
+                          {exp.supervisor && (
+                            <div className="text-primary font-medium text-sm">
+                              Supervisor: {exp.supervisor}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      <p className="text-muted-foreground leading-relaxed">
+                        {exp.description}
+                      </p>
+
+                      {/* Skills */}
+                      <div className="flex flex-wrap gap-2">
+                        {exp.skills.map((skill, skillIndex) => (
+                          <span 
+                            key={skillIndex}
+                            className="px-3 py-1 bg-muted/30 text-foreground text-xs rounded-full border border-muted/50"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Volunteer Experience */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
+              Volunteer <span className="gradient-text">Experience</span>
+            </h2>
+
+            <div className="space-y-8">
+              {volunteerExperiences.map((exp, index) => (
                 <div 
                   key={index}
                   className="floating-card p-6 lg:p-8 rounded-xl animate-slide-up group hover:scale-[1.02] transition-all duration-500"
@@ -250,10 +377,21 @@ const Experience = () => {
                       {course.status}
                     </span>
                   </div>
-                  <p className="text-primary font-medium text-sm mb-3">{course.provider}</p>
+                    <p className="text-primary font-medium text-sm mb-3">{course.provider}</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {course.description}
                   </p>
+                  {course.certificate && (
+                    <a 
+                      href={course.certificate} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs text-accent hover:text-accent-foreground hover:underline mt-2"
+                    >
+                      View Certificate
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>

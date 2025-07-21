@@ -4,12 +4,21 @@ import { Button } from "@/components/ui/button";
 const NewsSection = () => {
   const newsItems = [
     {
+      type: "research",
+      icon: Star,
+      title: "Undergraduate Researcher at Pragya Lab, BITS Goa",
+      description: "Working under the supervision of Professor Amitava Das on Neural Genomics and Spatial Reasoning in 3D Worlds, exploring cutting-edge applications of deep learning in computational biology and spatial intelligence.",
+      date: "March 2025",
+      status: "current",
+      color: "text-primary"
+    },
+    {
       type: "internship",
       icon: Briefcase,
       title: "Research Internship at CLAN Labs, Purdue University",
-      description: "I'll be interning at CLAN Labs, Purdue University for summer of 2025 where I'll be developing dynamic obstacle avoidance techniques using uncertainty-based adaptive planning with diffusion models under the supervision of Dr. Vaneet Aggarwal.",
-      date: "Summer 2025",
-      status: "upcoming",
+      description: "Currently developing dynamic obstacle avoidance techniques using energy-based adaptive planning with flow matching models under the supervision of Dr. Vaneet Aggarwal. Exploring multi-modal applications of diffusion models in medical domains.",
+      date: "May 2025 -- Present",
+      status: "current",
       color: "text-primary"
     },
     {
@@ -34,7 +43,7 @@ const NewsSection = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "upcoming": return "bg-primary/10 text-primary border-primary/20";
+      case "current": return "bg-primary/10 text-primary border-primary/20";
       case "published": return "bg-accent/10 text-accent border-accent/20";
       case "completed": return "bg-secondary/10 text-secondary border-secondary/20";
       default: return "bg-muted/10 text-muted-foreground border-muted/20";
