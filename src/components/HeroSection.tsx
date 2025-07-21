@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowDown, Sparkles, Code2, Brain, Rocket } from "lucide-react";
+import { ArrowDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -21,12 +21,6 @@ const HeroSection = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const floatingElements = [
-    { icon: Code2, delay: "0s", position: "top-20 left-10" },
-    { icon: Brain, delay: "1s", position: "top-32 right-20" },
-    { icon: Rocket, delay: "2s", position: "bottom-32 left-20" },
-    { icon: Sparkles, delay: "0.5s", position: "bottom-20 right-10" },
-  ];
 
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center justify-center">
@@ -57,16 +51,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Floating 3D Elements */}
-      {floatingElements.map((element, index) => (
-        <div
-          key={index}
-          className={`absolute ${element.position} floating-card p-4 rounded-xl opacity-20 hover:opacity-60 transition-all duration-500`}
-          style={{ animationDelay: element.delay }}
-        >
-          <element.icon className="w-6 h-6 text-primary" />
-        </div>
-      ))}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -144,14 +128,8 @@ const HeroSection = () => {
                 {/* 3D Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl" />
                 
-                {/* Floating decorative elements around photo */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-float opacity-80" />
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full animate-float opacity-80" style={{ animationDelay: "1s" }} />
-                <div className="absolute top-8 -left-6 w-4 h-4 bg-accent rounded-full animate-float opacity-80" style={{ animationDelay: "2s" }} />
               </div>
 
-              {/* Background decorative ring */}
-              <div className="absolute inset-0 border-2 border-primary/20 rounded-2xl scale-110 animate-rotate-slow" />
             </div>
           </div>
         </div>

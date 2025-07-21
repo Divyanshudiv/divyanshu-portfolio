@@ -20,18 +20,18 @@
     --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
     
-    /* Premium Color Palette */
-    --primary: 270 95% 75%;
-    --primary-foreground: 240 10% 3.9%;
-    --primary-glow: 270 95% 85%;
+    /* Premium Color Palette - Slytherin Green Theme */
+    --primary: 120 45% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 120 45% 45%;
     
-    --secondary: 200 95% 70%;
-    --secondary-foreground: 240 10% 3.9%;
-    --secondary-glow: 200 95% 80%;
+    --secondary: 195 90% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-glow: 195 90% 35%;
     
-    --accent: 330 95% 75%;
-    --accent-foreground: 240 10% 3.9%;
-    --accent-glow: 330 95% 85%;
+    --accent: 45 95% 50%;
+    --accent-foreground: 0 0% 10%;
+    --accent-glow: 45 95% 60%;
     
     --muted: 240 5% 15%;
     --muted-foreground: 240 5% 65%;
@@ -50,9 +50,9 @@
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-glow)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
     --gradient-glass: linear-gradient(135deg, hsl(var(--glass)), hsl(240 10% 20% / 0.1));
-    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.3), transparent),
-                     radial-gradient(ellipse 80% 50% at 80% 50%, hsl(var(--secondary) / 0.3), transparent),
-                     radial-gradient(ellipse 80% 50% at 20% 80%, hsl(var(--accent) / 0.3), transparent);
+    --gradient-mesh: radial-gradient(ellipse 80% 50% at 30% 20%, hsl(var(--primary) / 0.1), transparent),
+                     radial-gradient(ellipse 80% 50% at 70% 80%, hsl(var(--secondary) / 0.08), transparent),
+                     radial-gradient(ellipse 80% 50% at 20% 80%, hsl(var(--accent) / 0.06), transparent);
     
     /* 3D Shadows & Effects */
     --shadow-glass: 0 8px 32px 0 hsl(var(--primary) / 0.1), 
