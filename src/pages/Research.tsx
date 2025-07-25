@@ -16,11 +16,11 @@ const Research = () => {
     {
       title: "Altruistic Ride Sharing: A Community-Driven Approach to Short-Distance Mobility Using Multi-Agent Reinforcement Learning",
       authors: "Divyanshu Singh, Ashman Mehra, Snehanshu Saha, Santonu Sarkar",
-      venue: "ArXiv (Soon)",
+      venue: "Under review at IEEE Transactions on Intelligent Transportation Systems",
       year: "2025",
-      status: "Preprint",
+      status: "Under Review",
       link: "",
-      impact: "Preprint"
+      impact: "Under Review"
     }
   ];
 
@@ -49,14 +49,6 @@ const Research = () => {
       technologies: ["Deep Reinforcement Learning", "Generative AI", "Optimization"],
       type: "Research Project"
     },
-    {
-      title: "Graph Diffusion for RNA 3D Folding",
-      institution: "BITS Pilani",
-      period: "March 2025 -- Present",
-      description: "Developing a graph diffusion model to predict 3D structures of RNA molecules by leveraging graph neural networks and probabilistic sampling techniques. Exploring the integration of structural constraints and energy-based priors to enhance the accuracy of RNA folding predictions.",
-      technologies: ["Graph Neural Networks", "Diffusion Models", "Computational Biology"],
-      type: "Research Project"
-    }
   ];
 
   const completedProjects = [
@@ -92,6 +84,7 @@ const Research = () => {
     switch (status.toLowerCase()) {
       case "ongoing": return "bg-primary/10 text-primary border-primary/20";
       case "published": return "bg-accent/10 text-accent border-accent/20";
+      case "under review": return "bg-secondary/10 text-secondary border-secondary/20";
       case "completed": return "bg-secondary/10 text-secondary border-secondary/20";
       default: return "bg-muted/10 text-muted-foreground border-muted/20";
     }

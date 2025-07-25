@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Award, Code, BookOpen, Trophy, Users, Rocket, ExternalLink } from "lucide-react";
+import { MapPin, Calendar, Award, Code, BookOpen, Trophy, Users, Rocket, ExternalLink, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 
@@ -15,6 +15,18 @@ const Experience = () => {
       skills: ["Flow Matching", "Diffusion Models", "Motion Planning", "Python", "PyTorch"],
       icon: Rocket,
       color: "text-primary"
+    },
+    {
+      title: "Undergraduate Researcher",
+      company: "प्रragya Lab, BITS Goa",
+      location: "Goa, India",
+      period: "July 2025 -- Present",
+      status: "Current",
+      description: "Working on Neural Genomics and 3D Spatial Reasoning for LLMs.",
+      supervisor: "Dr. Amitava Das",
+      skills: ["Neural Genomics", "Spatial Reasoning", "LLMs", "Python", "Deep Learning"],
+      icon: Brain,
+      color: "text-accent"
     },
     {
       title: "Undergraduate Researcher",
@@ -45,25 +57,36 @@ const Experience = () => {
   const volunteerExperiences = [
     {
       title: "Teaching Assistant",
+      company: "CS-F429 Natural Language Processing, BITS Pilani",
+      location: "Goa, India",
+      period: "Aug -- Dec 2025",
+      status: "Current",
+      description: "Designing and conducting labs on NLP learning concepts for undergraduate students.",
+      skills: ["Teaching", "NLP", "Lab Design"],
+      icon: Users,
+      color: "text-primary"
+    },
+    {
+      title: "Teaching Assistant",
       company: "CS-F425 Deep Learning, BITS Pilani",
       location: "Goa, India",
       period: "Jan -- May 2025",
-      status: "Current",
+      status: "Completed",
       description: "Designed and conducted tutorials on deep learning concepts for undergraduate students.",
       skills: ["Teaching", "Deep Learning", "Curriculum Design"],
       icon: Users,
-      color: "text-primary"
+      color: "text-secondary"
     },
     {
       title: "Undergraduate Volunteer",
       company: "IndoML 2024",
       location: "Goa, India",
-      period: "December 2024",
+      period: "Dec 2024",
       status: "Completed",
       description: "Represented APPCAIR as one of the few undergraduate volunteers, showcased research at the sponsor stall, and facilitated Q&A sessions during the conference.",
       skills: ["Conference Management", "Research Presentation", "Networking"],
       icon: Award,
-      color: "text-secondary"
+      color: "text-accent"
     }
   ];
 

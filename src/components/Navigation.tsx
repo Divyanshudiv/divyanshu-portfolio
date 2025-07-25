@@ -16,6 +16,10 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Research", path: "/research" },
@@ -40,6 +44,7 @@ const Navigation = () => {
             <NavLink 
               to="/" 
               className="text-xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
+              onClick={handleNavClick}
             >
               Divyanshu Singh
             </NavLink>
@@ -57,6 +62,7 @@ const Navigation = () => {
                         : "text-foreground/80 hover:text-foreground"
                     }`
                   }
+                  onClick={handleNavClick}
                 >
                   {({ isActive }) => (
                     <>
@@ -121,7 +127,10 @@ const Navigation = () => {
                         : "text-foreground/80 hover:text-foreground hover:bg-muted/50"
                     }`
                   }
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    handleNavClick();
+                  }}
                 >
                   {item.name}
                 </NavLink>
