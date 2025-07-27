@@ -29,7 +29,9 @@ const AcademicSidebar = () => {
           <NavLink 
             to="/" 
             className="text-xl font-semibold text-white hover:text-gray-300 transition-colors duration-200"
-            onClick={handleNavClick}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           >
             Divyanshu Singh
           </NavLink>
@@ -62,23 +64,24 @@ const AcademicSidebar = () => {
         {/* Social Links */}
         <div className="p-6 border-t border-gray-800">
           <p className="text-xs text-gray-500 mb-4 font-medium uppercase tracking-wider">Connect</p>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="space-y-2">
             {socialLinks.map((social) => (
               <Button
                 key={social.label}
                 variant="ghost"
                 size="sm"
                 asChild
-                className="hover:bg-gray-800 hover:text-white transition-all duration-200 justify-start text-gray-300"
+                className="hover:bg-gray-800 hover:text-white transition-all duration-200 justify-start text-gray-300 w-full"
               >
                 <a
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
+                  className="flex items-center gap-3"
                 >
                   <social.icon className="w-4 h-4" />
-                  <span className="ml-2 text-xs">{social.label}</span>
+                  <span className="text-xs">{social.label}</span>
                 </a>
               </Button>
             ))}

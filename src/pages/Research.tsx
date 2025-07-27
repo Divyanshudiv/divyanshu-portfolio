@@ -82,11 +82,11 @@ const Research = () => {
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
-      case "ongoing": return "bg-primary/10 text-primary border-primary/20";
-      case "published": return "bg-accent/10 text-accent border-accent/20";
-      case "under review": return "bg-secondary/10 text-secondary border-secondary/20";
-      case "completed": return "bg-secondary/10 text-secondary border-secondary/20";
-      default: return "bg-muted/10 text-muted-foreground border-muted/20";
+      case "ongoing": return "bg-blue-100 text-blue-900 border-blue-300";
+      case "published": return "bg-green-100 text-green-900 border-green-300";
+      case "under review": return "bg-yellow-100 text-yellow-900 border-yellow-300";
+      case "completed": return "bg-gray-100 text-gray-900 border-gray-300";
+      default: return "bg-gray-100 text-gray-900 border-gray-300";
     }
   };
 
@@ -97,11 +97,11 @@ const Research = () => {
         <section className="py-20 relative overflow-hidden">
           <div className="container mx-auto px-8">
             <div className="max-w-4xl mx-auto text-center animate-slide-up">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-              Research & <span className="gradient-text">Projects</span>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+              Research & <span className="text-primary">Projects</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-8" />
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
+            <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
               Exploring the frontiers of artificial intelligence, machine learning, and computer science 
               through innovative research and cutting-edge projects.
             </p>
@@ -113,8 +113,8 @@ const Research = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Publications & <span className="gradient-text">Preprints</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Publications & <span className="text-primary">Preprints</span>
             </h2>
 
             <div className="space-y-6">
@@ -185,8 +185,8 @@ const Research = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Ongoing <span className="gradient-text">Projects</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Ongoing <span className="text-primary">Projects</span>
             </h2>
 
             <div className="space-y-8">
@@ -252,8 +252,8 @@ const Research = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Completed <span className="gradient-text">Projects</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Completed <span className="text-primary">Projects</span>
             </h2>
 
             <div className="space-y-8">
@@ -335,10 +335,10 @@ const Research = () => {
             {/* Research Interests */}
             <div className="mt-20 text-center animate-slide-up" style={{ animationDelay: "1s" }}>
               <div className="glass p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-6">Research Interests</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Research Interests</h3>
                 <div className="grid md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto">
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-primary">Core Areas</h4>
+                    <h4 className="font-semibold text-gray-900">Core Areas</h4>
                     <ul className="text-muted-foreground space-y-1">
                       <li>• Generative AI</li>
                       <li>• Deep Learning</li>
@@ -349,7 +349,7 @@ const Research = () => {
                     </ul>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-secondary">Applied Domains</h4>
+                    <h4 className="font-semibold text-gray-900">Applied Domains</h4>
                     <ul className="text-muted-foreground space-y-1">
                       <li>• Motion Planning</li>
                       <li>• Traffic Optimization</li>

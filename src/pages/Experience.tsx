@@ -167,10 +167,10 @@ const Experience = () => {
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
-      case "current": return "bg-primary/10 text-primary border-primary/20";
-      case "ongoing": return "bg-secondary/10 text-secondary border-secondary/20";
-      case "completed": return "bg-accent/10 text-accent border-accent/20";
-      default: return "bg-muted/10 text-muted-foreground border-muted/20";
+      case "current": return "bg-blue-100 text-blue-900 border-blue-300";
+      case "ongoing": return "bg-yellow-100 text-yellow-900 border-yellow-300";
+      case "completed": return "bg-green-100 text-green-900 border-green-300";
+      default: return "bg-gray-100 text-gray-900 border-gray-300";
     }
   };
 
@@ -181,11 +181,11 @@ const Experience = () => {
         <section className="py-20 relative overflow-hidden">
           <div className="container mx-auto px-8">
             <div className="max-w-4xl mx-auto text-center animate-slide-up">
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-              Experience & <span className="gradient-text">Skills</span>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+              Experience & <span className="text-primary">Skills</span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-8" />
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
+            <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
               A journey through research, internships, and technical expertise in the field of 
               artificial intelligence and computer science.
             </p>
@@ -197,8 +197,8 @@ const Experience = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Professional <span className="gradient-text">Experience</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Professional <span className="text-primary">Experience</span>
             </h2>
 
             <div className="space-y-8">
@@ -211,8 +211,8 @@ const Experience = () => {
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Icon and Status */}
                     <div className="flex lg:flex-col items-center lg:items-start gap-4 lg:gap-2 flex-shrink-0">
-                      <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-primary ${exp.color}`}>
-                        <exp.icon className="w-6 h-6 text-primary-foreground" />
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded bg-primary"></div>
                       </div>
                       <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(exp.status)} w-fit`}>
                         {exp.status}
@@ -271,8 +271,8 @@ const Experience = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Volunteer <span className="gradient-text">Experience</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Volunteer <span className="text-primary">Experience</span>
             </h2>
 
             <div className="space-y-8">
@@ -285,8 +285,8 @@ const Experience = () => {
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Icon and Status */}
                     <div className="flex lg:flex-col items-center lg:items-start gap-4 lg:gap-2 flex-shrink-0">
-                      <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-primary ${exp.color}`}>
-                        <exp.icon className="w-6 h-6 text-primary-foreground" />
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded bg-primary"></div>
                       </div>
                       <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(exp.status)} w-fit`}>
                         {exp.status}
@@ -340,8 +340,8 @@ const Experience = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Technical <span className="gradient-text">Skills</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Technical <span className="text-primary">Skills</span>
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -381,8 +381,8 @@ const Experience = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up">
-              Courses & <span className="gradient-text">Certifications</span>
+            <h2 className="text-4xl font-bold text-center mb-16 animate-slide-up text-gray-900">
+              Courses & <span className="text-primary">Certifications</span>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -443,7 +443,7 @@ const Experience = () => {
                   <Button 
                     variant="outline" 
                     size="lg"
-                    className="glass border-secondary/30 hover:border-secondary text-secondary hover:text-secondary-foreground hover:bg-secondary transition-all duration-300"
+                    className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
                     asChild
                   >
                     <a href="https://www.linkedin.com/in/divyanshu-singh-130951250" target="_blank" rel="noopener noreferrer">
