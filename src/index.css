@@ -8,7 +8,7 @@
   :root {
     /* Light Academic Background System */
     --background: 0 0% 98%;
-    --foreground: 222 14% 15%;
+    --foreground: 222 14% 25%;
     
     /* Glass & Card System */
     --card: 0 0% 100%;
@@ -34,7 +34,7 @@
     --accent-glow: 210 40% 90%;
     
     --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted-foreground: 215 16% 35%;
     
     /* Utility Colors */
     --destructive: 0 84% 60%;
