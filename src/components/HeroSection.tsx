@@ -24,112 +24,66 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen relative overflow-hidden flex items-center justify-center">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-30">
+      {/* Subtle Background Elements */}
+      <div className="absolute inset-0 opacity-10">
         <div 
           className="absolute w-96 h-96 bg-gradient-primary rounded-full blur-3xl animate-float"
           style={{
-            left: `${mousePosition.x * 0.1}%`,
-            top: `${mousePosition.y * 0.1}%`,
-          }}
-        />
-        <div 
-          className="absolute w-64 h-64 bg-gradient-secondary rounded-full blur-3xl animate-float"
-          style={{
-            right: `${mousePosition.x * 0.05}%`,
-            bottom: `${mousePosition.y * 0.05}%`,
-            animationDelay: "1s",
-          }}
-        />
-        <div 
-          className="absolute w-48 h-48 bg-gradient-accent rounded-full blur-3xl animate-float"
-          style={{
-            left: `${mousePosition.x * 0.08}%`,
-            bottom: `${mousePosition.y * 0.08}%`,
-            animationDelay: "2s",
+            left: `${mousePosition.x * 0.05}%`,
+            top: `${mousePosition.y * 0.05}%`,
           }}
         />
       </div>
 
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-8 text-center lg:text-left animate-slide-up">
+      <div className="container mx-auto px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="gradient-text">Divyanshu</span>{" "}
-                <span className="text-foreground">Singh</span>
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+                Divyanshu Singh
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-light">
-                Computer Science Engineer | AI Researcher
+                AI Researcher & Computer Science Engineer
               </p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2 text-sm">
-                <span className="glass px-3 py-1 rounded-full text-primary font-medium">
+              <div className="flex flex-wrap justify-center gap-3 text-sm">
+                <span className="px-4 py-2 rounded-full bg-card text-primary font-medium border border-border">
                   BITS Pilani
                 </span>
-                <span className="glass px-3 py-1 rounded-full text-secondary font-medium">
+                <span className="px-4 py-2 rounded-full bg-card text-primary font-medium border border-border">
                   CLAN Labs, Purdue
                 </span>
-                <span className="glass px-3 py-1 rounded-full text-accent font-medium">
+                <span className="px-4 py-2 rounded-full bg-card text-primary font-medium border border-border">
                   APPCAIR Research
                 </span>
               </div>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              I'm a curious mind navigating the vast universe of computer science. 
-              From crafting intelligent algorithms to unraveling the mysteries of machine learning, 
-              I'm on a journey to push the boundaries of what's possible in tech.
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Specializing in <span className="text-primary font-medium">Deep Learning</span>, 
+              <span className="text-primary font-medium"> Reinforcement Learning</span>, and 
+              <span className="text-primary font-medium"> Generative AI</span>. 
+              Currently exploring the frontiers of artificial intelligence through research and innovation.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="interactive-button group"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:scale-105"
                 onClick={scrollToAbout}
               >
                 Explore My Work
-                <ArrowDown className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
+                <ArrowDown className="ml-2 w-4 h-4" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="glass border-primary/30 hover:border-primary text-primary hover:text-primary-foreground hover:bg-primary transition-all duration-300"
+                className="border-border hover:bg-muted transition-all duration-300"
                 asChild
               >
                 <a href="mailto:f20221129@goa.bits-pilani.ac.in">
                   Get In Touch
                 </a>
               </Button>
-            </div>
-          </div>
-
-          {/* Photo Section - Placeholder for animated photo */}
-          <div className="flex justify-center lg:justify-end animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <div className="relative">
-              {/* Main photo container with 3D effects */}
-              <div className="floating-card w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden relative group">
-                {/* Placeholder for animated photo */}
-                <div className="w-full h-full bg-gradient-primary opacity-20 flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="w-20 h-20 mx-auto bg-primary/30 rounded-full flex items-center justify-center">
-                      <Sparkles className="w-10 h-10 text-primary animate-glow" />
-                    </div>
-                    <p className="text-primary font-medium">
-                      Your Animated Photo Here
-                    </p>
-                    <p className="text-xs text-muted-foreground px-4">
-                      This space is reserved for your animated photo
-                    </p>
-                  </div>
-                </div>
-                
-                {/* 3D Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl" />
-                
-              </div>
-
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Brain, Network, Code, FileText, ExternalLink, Calendar, Users, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navigation from "@/components/Navigation";
+import AcademicSidebar from "@/components/AcademicSidebar";
 
 const Research = () => {
   const publications = [
@@ -91,13 +91,13 @@ const Research = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-slide-up">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+    <div className="min-h-screen flex">
+      <AcademicSidebar />
+      <div className="flex-1 ml-64 transition-all duration-300">
+        <section className="py-20 relative overflow-hidden">
+          <div className="container mx-auto px-8">
+            <div className="max-w-4xl mx-auto text-center animate-slide-up">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-foreground">
               Research & <span className="gradient-text">Projects</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full mb-8" />
@@ -365,6 +365,7 @@ const Research = () => {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 };
