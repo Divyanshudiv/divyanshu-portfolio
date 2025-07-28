@@ -1,8 +1,10 @@
 import { Brain, Network, Code, FileText, ExternalLink, Calendar, Users, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AcademicSidebar from "@/components/AcademicSidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Research = () => {
+  const isMobile = useIsMobile();
   const publications = [
     {
       title: "The Last Mile: A Novel, HotSpot-Based Distributed Path-Sharing Network for Food Deliveries",
@@ -93,7 +95,7 @@ const Research = () => {
   return (
     <div className="min-h-screen flex">
       <AcademicSidebar />
-      <div className="flex-1 ml-64 transition-all duration-300">
+      <div className={`flex-1 ${isMobile ? "ml-0" : "ml-64"} transition-all duration-300`}>
         <section className="py-20 relative overflow-hidden">
           <div className="container mx-auto px-8">
             <div className="max-w-4xl mx-auto text-center animate-slide-up">
@@ -130,7 +132,11 @@ const Research = () => {
                         <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                           {pub.title}
                         </h3>
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(pub.status)} w-fit`}>
+                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${
+                          pub.status === "Published" 
+                            ? "bg-green-100 text-green-800 border-green-600" 
+                            : "bg-yellow-100 text-yellow-800 border-yellow-600"
+                        } w-fit`}>
                           {pub.status}
                         </span>
                       </div>
@@ -152,8 +158,8 @@ const Research = () => {
                       </div>
 
                       {pub.impact && (
-                        <div className="glass p-3 rounded-lg border-accent/20">
-                          <span className="text-accent font-semibold text-sm">{pub.impact}</span>
+                        <div className="glass p-3 rounded-lg border-primary/20">
+                          <span className="text-primary font-semibold text-sm">{pub.impact}</span>
                         </div>
                       )}
                     </div>
@@ -163,7 +169,7 @@ const Research = () => {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="glass border-accent/30 hover:border-accent text-accent hover:text-accent-foreground hover:bg-accent transition-all duration-300"
+                          className="border-green-600 hover:border-green-700 text-green-700 hover:text-green-800 hover:bg-green-50 transition-all duration-300"
                           asChild
                         >
                           <a href={pub.link} target="_blank" rel="noopener noreferrer">
@@ -290,8 +296,8 @@ const Research = () => {
                       </p>
 
                       {project.publication && (
-                        <div className="glass p-3 rounded-lg border-accent/20">
-                          <span className="text-accent font-semibold text-sm">{project.publication}</span>
+                        <div className="glass p-3 rounded-lg border-primary/20">
+                          <span className="text-primary font-semibold text-sm">{project.publication}</span>
                         </div>
                       )}
 
@@ -317,7 +323,7 @@ const Research = () => {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="glass border-secondary/30 hover:border-secondary text-secondary hover:text-secondary-foreground hover:bg-secondary transition-all duration-300"
+                          className="border-primary hover:border-primary/80 text-primary hover:text-primary hover:bg-primary/10 transition-all duration-300"
                           asChild
                         >
                           <a href={project.link} target="_blank" rel="noopener noreferrer">

@@ -95,10 +95,13 @@ const NewsSection = () => {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="border-green-200 hover:border-green-300 text-green-700 hover:text-green-800 hover:bg-green-50 transition-all duration-300"
+                          className="border-green-600 hover:border-green-700 text-green-700 hover:text-green-800 hover:bg-green-50 transition-all duration-300"
+                          asChild
                         >
-                          View Publication
-                          <ExternalLink className="w-4 h-4 ml-2" />
+                          <a href="https://ieeexplore.ieee.org/abstract/document/10705350" target="_blank" rel="noopener noreferrer">
+                            View Publication
+                            <ExternalLink className="w-4 h-4 ml-2" />
+                          </a>
                         </Button>
                       )}
                     </div>

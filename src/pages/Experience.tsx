@@ -1,8 +1,10 @@
 import { MapPin, Calendar, Award, Code, BookOpen, Trophy, Users, Rocket, ExternalLink, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AcademicSidebar from "@/components/AcademicSidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Experience = () => {
+  const isMobile = useIsMobile();
   const experiences = [
     {
       title: "Research Intern",
@@ -177,7 +179,7 @@ const Experience = () => {
   return (
     <div className="min-h-screen flex">
       <AcademicSidebar />
-      <div className="flex-1 ml-64 transition-all duration-300">
+      <div className={`flex-1 ${isMobile ? "ml-0" : "ml-64"} transition-all duration-300`}>
         <section className="py-20 relative overflow-hidden">
           <div className="container mx-auto px-8">
             <div className="max-w-4xl mx-auto text-center animate-slide-up">
@@ -214,7 +216,11 @@ const Experience = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                         <div className="w-6 h-6 rounded bg-primary"></div>
                       </div>
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(exp.status)} w-fit`}>
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${
+                        exp.status === "Current" 
+                          ? "bg-blue-100 text-blue-800 border-blue-600" 
+                          : "bg-gray-100 text-gray-800 border-gray-600"
+                      } w-fit`}>
                         {exp.status}
                       </span>
                     </div>
@@ -288,7 +294,11 @@ const Experience = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                         <div className="w-6 h-6 rounded bg-primary"></div>
                       </div>
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(exp.status)} w-fit`}>
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${
+                        exp.status === "Current" 
+                          ? "bg-blue-100 text-blue-800 border-blue-600" 
+                          : "bg-gray-100 text-gray-800 border-gray-600"
+                      } w-fit`}>
                         {exp.status}
                       </span>
                     </div>
@@ -396,7 +406,7 @@ const Experience = () => {
                     <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                       {course.title}
                     </h3>
-                    <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium ${getStatusColor(course.status)}`}>
+                    <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 border border-green-600">
                       {course.status}
                     </span>
                   </div>

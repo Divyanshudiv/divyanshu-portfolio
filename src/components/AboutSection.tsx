@@ -48,12 +48,12 @@ const AboutSection = () => {
                 I'm currently pursuing a Bachelor of Computer Science at{" "}
                 <span className="text-primary font-semibold">Birla Institute of Technology and Science, Pilani</span>, 
                 where I also work as an undergraduate researcher at{" "}
-                <span className="text-secondary font-semibold">Anuradha and Prashanth Palakurthi Centre for Artificial Intelligence Research (APPCAIR)</span>.
+                <span className="text-foreground font-semibold">Anuradha and Prashanth Palakurthi Centre for Artificial Intelligence Research (APPCAIR)</span>.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
                 My work primarily focuses on AI and machine learning, particularly in{" "}
-                <span className="text-accent font-semibold">reinforcement learning and traffic optimization models</span>.
+                <span className="text-foreground font-semibold">reinforcement learning and traffic optimization models</span>.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
