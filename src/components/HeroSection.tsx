@@ -90,12 +90,12 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <Button
           variant="ghost"
           size="sm"
           onClick={scrollToAbout}
-          className="flex flex-col items-center space-y-2 text-muted-foreground hover:text-primary transition-colors duration-300"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
         >
           <span className="text-xs">Scroll</span>
           <ArrowDown className="w-4 h-4" />
