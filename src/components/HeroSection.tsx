@@ -90,7 +90,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce flex justify-center">
+      <div className="absolute bottom-8 w-full flex justify-center animate-bounce">
         <Button
           variant="ghost"
           size="sm"
